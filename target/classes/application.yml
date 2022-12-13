@@ -1,0 +1,25 @@
+server:
+  port: 8080
+
+spring:
+  mvc:
+    view:
+      prefix: /view/
+      suffix: .jsp
+  profiles:
+    active: dev
+  main:
+    banner-mode: off
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/visionary_springmvc?serverTimezone=UTC
+    username: root
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+    open-in-view: false
+    generate-ddl: false
